@@ -1,0 +1,98 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form!</title>
+    <link rel="stylesheet" href="{% static 'blog/styles.css' %}">
+</head>
+<body>
+    <nav class="navigation">
+        <ul>
+          <li><a href="{%url 'home-page' %}">Home</a></li>
+          <li><a href="{%url 'about-page' %}">About</a></li>
+          <li><a href=""{%url 'home-page' %}"">Services</a></li>
+          <li><a href="{%url 'home-page' %}">Contact</a></li>
+        </ul>
+       <a href="{% url 'feedback' %}" >  <div class="feedback"> Please Provide Feedback!</div> </a>
+      </nav>
+
+    <h1>Welcome to newstation</h1>
+    <div class="blog-container">
+
+        <div class="blog-post">
+          <h2 class="blog-title">Blog Post Title 1</h2>
+          <p class="blog-content">We were both young when I first saw you
+            I close my eyes and the flashback starts <br>
+            I'm standing there
+            On a balcony, in summer air
+            See the lights, see the party, the ball gowns <br>
+            See you make your way through the crowd
+            And say, "Hello".</p>
+          <a href="{% url 'blog_page' %}" class="read-more">Read more</a>
+        </div>
+    
+        <div class="blog-post">
+          <h2 class="blog-title">Blog Post Title 2</h2>
+          <p class="blog-content">It's you, it's always you
+            If I'm ever gonna fall in love, <br> I know it's gon' be you 
+            It's you,  it's always you 
+            Met a lot of people,  <br> but nobody feels like you 
+            So please don't break my heart, <br> don't tear me apart 
+            I know how it starts, trust me, I've been broken before <br>
+            Don't break me again<p>
+          <a href="#" class="read-more">Read more</a>
+        </div>
+        <div class="blog-post">
+            <h2 class="blog-title">Blog Post Title 3</h2>
+            <p class="blog-content">
+              You've been runnin' 'round, runnin' 'round, runnin' <br> 'round throwin' that dirt all on my name
+'Cause you knew that I, <br> knew that I, knew that I'd call you up <br>
+You've been going 'round, going <br> 'round, going 'round every party in L.A. <br>
+'Cause you knew that I, knew t hat I,  <br> knew that I'd be at one, oh
+
+            </p>
+            <a href="#" class="read-more">Read more</a>
+          </div>
+
+          <div class="blog-post">
+            <h2 class="blog-title">Blog Post Title 1</h2>
+            <p class="blog-content">We were both young when I first saw you
+              I close my eyes and the flashback starts <br>
+              I'm standing there
+              On a balcony, in summer air
+              See the lights, see the party, the ball gowns <br>
+              See you make your way through the crowd
+              And say, "Hello".</p>
+            <a href="{% url 'blog_page' %}" class="read-more">Read more</a>
+          </div>
+    
+          <div class="blog-post">
+            <h2 class="blog-title">Blog Post Title 1</h2>
+            <p class="blog-content">We were both young when I first saw you
+              I close my eyes and the flashback starts <br>
+              I'm standing there
+              On a balcony, in summer air
+              See the lights, see the party, the ball gowns <br>
+              See you make your way through the crowd
+              And say, "Hello".</p>
+            <a href="{% url 'blog_page' %}" class="read-more">Read more</a>
+          </div>
+    
+          <div class="blog-post">
+            <h2 class="blog-title">Blog Post Title 1</h2>
+            <p class="blog-content">We were both young when I first saw you
+              I close my eyes and the flashback starts <br>
+              I'm standing there
+              On a balcony, in summer air
+              See the lights, see the party, the ball gowns <br>
+              See you make your way through the crowd
+              And say, "Hello".</p>
+            <a href="{% url 'blog_page' %}" class="read-more">Read more</a>
+          </div>
+      
+</body>
+</html>
