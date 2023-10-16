@@ -108,4 +108,27 @@ footer {
   color: white;
 }
   
-  
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+} */
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* header {
+  text-align: center;
+  margin-bottom: 20px;
+} */
+
+.about, .introduction, .lyrics {
+  margin-bottom: 30px;
+}
+
+/* footer {
+  text-align: center;} */
+

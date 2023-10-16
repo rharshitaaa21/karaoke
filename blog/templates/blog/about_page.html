@@ -1,15 +1,47 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Website</title>
+  <link rel="stylesheet" href="{% static 'blog/styles.css' %}">
 </head>
 <body>
+    <nav class="navigation">
+        <ul>
+          <li><a href="{%url 'home-page' %}">Home</a></li>
+          <li><a href="{%url 'about-page' %}">About</a></li>
+          <li><a href=""{%url 'home-page' %}"">Services</a></li>
+          <li><a href="{%url 'home-page' %}">Contact</a></li>
+        </ul>
+    </nav>
 
-    Are you struggling to grasp your favorite artist’s lines? Or maybe you are getting ready for karaoke? Get yourself reliable and accurate lyrics from the internet. You may be wondering where exactly can you get these lyrics. Don’t stress yourself much as there plenty of websites that offer them online. The bugging question is, how do you know where to look? While every site has its unique characteristics and features, we have conducted in-depth and extensive research to bring you the best song lyrics websites out there
-    
-    
+  <div class="container">
+    <header>
+      <h1>Welcome to our Music Website</h1>
+    </header>
+    <section class="about">
+      <h2>About Us</h2>
+      <p>
+        We are passionate about music and dedicated to bringing you the best lyrics from your favorite artists. Explore our collection of lyrics and immerse yourself in the world of music.
+      </p>
+    </section>
+    <section class="introduction">
+      <h2>Introduction to Music Artists</h2>
+      <p>
+        Discover and learn about various music artists across different genres. From legendary icons to emerging talents, we provide insights into their journeys and contributions to the music industry.
+      </p>
+    </section>
+    <section class="lyrics">
+      <h2>Song Lyrics</h2>
+      <p>
+        Explore the lyrics of your favorite songs and get lost in the music. We have an extensive collection of song lyrics that will resonate with your soul.
+      </p>
+    </section>
+    <footer>
+      <p>&copy; 2023 Music Website</p>
+    </footer>
+  </div>
 </body>
 </html>
