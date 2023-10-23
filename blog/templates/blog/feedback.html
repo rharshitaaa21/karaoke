@@ -1,17 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 
-<!DOCTYPE html>
-<html>
-<head>
-<title>Contact form</title>
-{% block  css %} <link rel="stylesheet" href="{% static 'blog/style.css' %}">
-{% comment %} <link rel="stylesheet" href="{% static 'blog/styles.css' %}"> {% endcomment %}
+{% block css %} 
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+{% endblock %}
 
-{% endblock  %}
 
-</head>
-<body>
     {% block content  %}
     <nav class="navigation">
         <ul>
@@ -22,29 +16,26 @@
         </ul>
     </nav>
     
-<div class="main-block">
-    <div class="left-part">
-    <i class="fas fa-envelope"></i>
-    <i class="fas fa-at"></i>
-    <i class="fas fa-mail-bulk"></i>
+    <div class="main-block">
+        <div class="left-part">
+            <i class="fas fa-envelope"></i>
+            <i class="fas fa-at"></i>
+            <i class="fas fa-mail-bulk"></i>
+        </div>
+        <form method="post" action="{% url 'submit_contact' %}">
+            {% csrf_token %}
+            <h1>Contact Us</h1>
+            <div class="info">
+                {{ form.full_name }}
+                {{ form.email }}
+                {{ form.phone_number }}
+            </div>
+            <p>Message</p>
+            <div>
+                {{ form.message }}
+            </div>
+            <button type="submit">Submit</button>
+        </form>
     </div>
-    <form action="/">
-    <h1>Contact Us</h1>
-    <div class="info">
-    <input class="fname" type="text" name="name" placeholder="Full name">
-    <input type="text" name="name" placeholder="Email">
-    <input type="text" name="name" placeholder="Phone number">
-    <input type="text" name="name" placeholder="Website">
-    </div>
-    <p>Message</p>
-    <div>
-    <textarea rows="4"></textarea>
-    </div>
-    <button type="submit" href="/">Submit</button>
-    </form>
-    </div>
+    
     {% endblock  %}
-
-</body>
-</html>
-

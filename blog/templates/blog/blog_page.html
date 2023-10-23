@@ -1,15 +1,10 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link rel="stylesheet" href="{% static 'blog/styles.css' %}">
+{% extends "base.html" %}
+{% block css %}
 
-  <title>My Blog</title>
-</head>
-<body>
+<link rel="stylesheet" href="{% static 'blog/styles.css' %}">{% endblock  %}
+
+{% block content   %}
   <nav class="navigation">
     <ul>
       <li><a href="{%url 'home-page' %}">Home</a></li>
@@ -30,6 +25,7 @@
        
                   {% comment %} <div class="image-size"><img src="{% static 'blog/images/image-1.jpg' %}"  alt="Image 1"> {% endcomment %}
       <div class="center">
+       
         <h2>Blog Post Title 1</h2>
         <p>We were both young when I first saw you
           I close my eyes and the flashback starts
@@ -81,15 +77,5 @@
           I love you, and that's all I really know
           I talked to your dad, go pick out a white dress <br>
           It's a love story, baby, just say yes"
-    <br>
-      </p>
-    </div>
-      
-     
-  </div>
-
-  <footer>
-    <p>&copy; 2023 My Blog</p>
-  </footer>
-</body>
-</html>
+          {% endblock  %}
+  
